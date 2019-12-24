@@ -1,0 +1,4 @@
+<!--mine.wxml-->
+<view class="container">
+  <text>添加</text>
+</view>

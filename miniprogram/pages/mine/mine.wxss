@@ -1,0 +1,42 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* 用户信息 */
+
+.user {
+  display: flex;
+  justify-items: flex-start;
+  align-items: center;
+  padding: 50rpx 20rpx;
+}
+
+.user .photo {
+  width: 150rpx;
+  height: 150rpx;
+}
+
+.user .info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding-left: 20rpx;
+}
+
+/* 功能列表 */
+
+.button-list {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  line-height: 2.5;
+}
+
+.button-list text {
+  width: 100vw;
+  padding: 0 20rpx;
+  background-color: white;
+  margin-bottom: 10rpx;
+}
