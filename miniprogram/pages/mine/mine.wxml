@@ -7,9 +7,12 @@
       <text>上次登录：{{nextTime}}</text>
     </view>
   </view>
-  <view class="button-list">
-    <text>头像</text>
-    <text>联系信息</text>
-    <text>密码</text>
+  <view class="list">
+    <navigator class="item" url="/pages/photo/photo">头像</navigator>
+    <navigator class="item" url="/pages/contact/contact">联系信息</navigator>
+    <navigator class="item" url="/pages/password/password">密码</navigator>
+  </view>
+  <view class="sub-button">
+    <text>退出登录</text>
   </view>
 </view>
