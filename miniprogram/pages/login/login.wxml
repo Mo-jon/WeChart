@@ -9,7 +9,7 @@
       <input name="input" placeholder="密码" />
     </view>
     <view style="margin-top:30rpx">
-      <button class="primary-button" formType="submit">登录</button>
+      <button class="primary-button" formType="submit" bindtap="submit">登录</button>
     </view>
   </form>
 </view>

@@ -3,8 +3,8 @@
   <view class="user">
     <image class="photo" src="{{photo}}"></image>
     <view class="info">
-      <text>{{userName}}</text>
-      <text>上次登录：{{nextTime}}</text>
+      <text>{{user.account}}</text>
+      <text>上次登录：{{user.nextTime}}</text>
     </view>
   </view>
   <view class="list">

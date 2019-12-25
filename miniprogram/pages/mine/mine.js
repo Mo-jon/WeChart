@@ -1,13 +1,16 @@
 //mine.js
-const app = getApp()
+import LocalStorage from "../../services/localStorage";
 
 Page({
   data: {
     photo: "/images/user.png",
-    userName: "Guiqiang",
-    nextTime: "2019/12/12",
+    user: {}
   },
 
   onLoad: function () {
+    // 获取登录信息
+    this.setData({
+      user: LocalStorage.user
+    })
   },
 })
