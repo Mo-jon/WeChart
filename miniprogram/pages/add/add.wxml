@@ -1,4 +1,23 @@
 <!--mine.wxml-->
 <view class="container">
-  <text>添加</text>
+  <form bindsubmit="formSubmit" class="list">
+    <view class="uploader" bindtap="doUpload">
+      <image class="image" src="{{imgUrl}}" mode="aspectFit" bindtap="previewImg"></image>
+    </view>
+    <view class="item">
+      <label>名称</label>
+      <input name="input" placeholder="请输入名称" />
+    </view>
+    <view class="item">
+      <label>类型</label>
+      <input name="input" placeholder="请输入类型" />
+    </view>
+    <view class="item">
+      <label>描述</label>
+      <input name="input" placeholder="请输入描述" />
+    </view>
+    <view class="primary-button">
+      <text>提交</text>
+    </view>
+  </form>
 </view>

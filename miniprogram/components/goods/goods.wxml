@@ -1,0 +1,11 @@
+<!--components/goods/goods.wxml-->
+<view class="item" bindtap="goDetail">
+  <image class="image" src="{{goods.image}}"></image>
+  <view class="info">
+    <text class="title">{{goods.title}}</text>
+    <view class="type">
+      <text>{{goods.type}}</text>
+    </view>
+    <text class="detail">{{goods.detail}}</text>
+  </view>
+</view>

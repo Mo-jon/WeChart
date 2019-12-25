@@ -1,4 +1,6 @@
 {
   "navigationBarTitleText": "列表",
-  "usingComponents": {}
+  "usingComponents": {
+    "goods-component": "/components/goods/goods"
+  }
 }

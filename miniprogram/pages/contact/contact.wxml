@@ -1,2 +1,17 @@
 <!--miniprogram/pages/contact/contact.wxml-->
-<text>miniprogram/pages/contact/contact.wxml</text>
+<view class="container">
+  <form bindsubmit="formSubmit" class="list">
+    <view class="item">
+      <input name="input" placeholder="名字" />
+    </view>
+    <view class="item">
+      <input name="input" placeholder="电话" />
+    </view>
+    <view class="item">
+      <input name="input" placeholder="住址" />
+    </view>
+    <view class="primary-button">
+      <text>保存</text>
+    </view>
+  </form>
+</view>

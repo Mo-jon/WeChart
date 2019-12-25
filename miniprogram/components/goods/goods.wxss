@@ -1,0 +1,41 @@
+/* components/goods/goods.wxss */
+
+.item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  box-sizing: border-box;
+  padding: 20rpx;
+}
+
+.image {
+  width: 100px;
+  height: 100px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+}
+
+.title {
+  font-weight: bold;
+}
+
+.type {
+  margin: 20rpx 0;
+}
+
+.type text {
+  font-size: 20rpx;
+  border: 1rpx solid #1296db;
+  text-align: center;
+  padding: 10rpx 20rpx;
+  border-radius: 5rpx;
+}
+
+.detail {
+  font-size: 30rpx;
+}

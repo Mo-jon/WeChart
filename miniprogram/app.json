@@ -1,13 +1,14 @@
 {
   "pages": [
-    "pages/index/index",
     "pages/list/list",
+    "pages/index/index",
     "pages/add/add",
     "pages/mine/mine",
     "pages/password/password",
     "pages/contact/contact",
     "pages/photo/photo",
-    "pages/login/login"
+    "pages/login/login",
+    "pages/detail/detail"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",

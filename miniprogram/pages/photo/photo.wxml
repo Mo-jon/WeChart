@@ -1,2 +1,9 @@
 <!--miniprogram/pages/photo/photo.wxml-->
-<text>miniprogram/pages/photo/photo.wxml</text>
+<view class="container">
+  <view class="uploader" bindtap="doUpload">
+    <image class="image" src="{{imgUrl}}" mode="aspectFit" bindtap="previewImg"></image>
+  </view>
+  <view class="primary-button">
+    <text>保存</text>
+  </view>
+</view>

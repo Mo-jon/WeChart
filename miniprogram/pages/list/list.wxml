@@ -1,3 +1,6 @@
 <!--mine.wxml-->
 <view class="container">
+  <view class="list" wx:for="{{list}}" wx:for-item="goods">
+    <goods-component goods="{{goods}}" bind:goDetail="goDetail"></goods-component>
+  </view>
 </view>

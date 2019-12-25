@@ -8,8 +8,8 @@
     <view class="item">
       <input name="input" placeholder="密码" />
     </view>
-    <view class="item primary-background">
-      <button formType="submit">登录</button>
+    <view style="margin-top:30rpx">
+      <button class="primary-button" formType="submit">登录</button>
     </view>
   </form>
 </view>
