@@ -1,0 +1,7 @@
+<!--miniprogram/pages/phone/phone.wxml-->
+<view class="container">
+  <text>获取电话号码，接口针对非个人开发者，需要用户先进行微信登录。调用：wx.login</text>
+  <text>电话：</text>
+  <text style="word-break: break-word">{{phone}}</text>
+  <button class="primary-button" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">获取电话</button>
+</view>

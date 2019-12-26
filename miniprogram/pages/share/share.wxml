@@ -1,0 +1,6 @@
+<!--miniprogram/pages/share/share.wxml-->
+<view class="container">
+  <text>分享：</text>
+  <text>这是mojon小程序的一个分享</text>
+  <button class="primary-button" open-type="share">分享</button>
+</view>
