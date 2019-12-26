@@ -2,5 +2,6 @@
   "navigationBarTitleText": "列表",
   "usingComponents": {
     "goods-component": "/components/goods/goods"
-  }
+  },
+  "enablePullDownRefresh": true
 }

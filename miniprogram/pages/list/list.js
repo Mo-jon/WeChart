@@ -7,7 +7,10 @@ Page({
   },
 
   // 加载列表
-  onLoad: function () {
+  onLoad: function () {},
+
+  // 每次都加载
+  onShow: function () {
     this.getData()
     this.getCrops()
   },
@@ -37,10 +40,18 @@ Page({
     })
   },
 
-  // 加载下一页
+  // 上拉加载
   onReachBottom: function () {
-    console.log('可以分页了')
+    console.log('分页')
     this.getData()
+  },
+
+  // 下拉刷新
+  onPullDownRefresh: function () {
+    console.log('刷新')
+    this.data.list = []
+    this.getData()
+    this.getCrops()
   },
 
   // 查看详情

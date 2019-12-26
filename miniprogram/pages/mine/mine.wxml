@@ -12,7 +12,7 @@
     <navigator class="item" url="/pages/contact/contact">联系信息</navigator>
     <navigator class="item" url="/pages/password/password">密码</navigator>
   </view>
-  <view class="sub-button">
-    <text>退出登录</text>
+  <view class="sub-button" bindtap="login">
+    <text>{{user? '退出登录' : '登录'}}</text>
   </view>
 </view>

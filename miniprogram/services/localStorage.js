@@ -1,16 +1,8 @@
 class LocalStorage {
   // 构造函数
   constructor() {
-    let user = wx.getStorageSync("user");
-    let location = wx.getStorageSync("location");
-
     // 未登录(user==null)
-    this.user = user ? JSON.parse(user.toString()) : null;
-    console.log("localStorage-->user", this.user);
-
-    // 缓存地址
-    this.location = location ? JSON.parse(location.toString()) : null;
-    console.log("localStorage-->location", this.location);
+    this.user = null;
   }
 
   /**
@@ -20,6 +12,7 @@ class LocalStorage {
   login(user) {
     return new Promise((resolve, reject) => {
       this.set("user", user).then(() => {
+        this.user = user;
         resolve();
       }).catch(() => {
         reject();
@@ -33,6 +26,7 @@ class LocalStorage {
   logout() {
     return new Promise((resolve, reject) => {
       this.remove("user").then(() => {
+        this.user = null;
         resolve();
       }).catch(() => {
         reject();
@@ -68,12 +62,9 @@ class LocalStorage {
   get(storageName) {
     return new Promise((resolve, reject) => {
       try {
-        wx.getStorage({
-          key: storageName.toString(),
-          success(res) {
-            resolve(JSON.parse(res.data));
-          }
-        })
+        let value = wx.getStorageSync(storageName.toString());
+        value = value ? JSON.parse(value) : null;
+        resolve(value);
       } catch (error) {
         console.error('[storage-get]', error);
         reject();
@@ -88,7 +79,7 @@ class LocalStorage {
   remove(storageName) {
     return new Promise((resolve, reject) => {
       try {
-        localStorage.removeItem(storageName);
+        wx.removeStorageSync(storageName.toString());
         resolve();
       } catch (error) {
         console.error('[storage-remove]', error);

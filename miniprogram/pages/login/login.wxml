@@ -3,10 +3,10 @@
 <view class="container">
   <form bindsubmit="formSubmit" class="list">
     <view class="item">
-      <input name="input" placeholder="用户名" />
+      <input id="name" bindinput="bindKeyInput" placeholder="用户名" />
     </view>
     <view class="item">
-      <input name="input" placeholder="密码" />
+      <input id="psw" password type="text" bindinput="bindKeyInput" placeholder="密码" />
     </view>
     <view style="margin-top:30rpx">
       <button class="primary-button" formType="submit" bindtap="submit">登录</button>

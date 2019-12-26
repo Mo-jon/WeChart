@@ -2,6 +2,7 @@
 
 import Api from '../../services/api.js';
 import LocalStorage from "../../services/localStorage";
+import Tips from "../../services/tips";
 
 Page({
 
@@ -9,7 +10,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    name: '',
+    psw: ''
   },
 
   /**
@@ -17,11 +19,34 @@ Page({
    */
   onLoad: function (options) {},
 
+  // 输入事件监听,双向数据绑定实现
+  bindKeyInput: function (e) {
+    console.log(e)
+    switch (e.target.id) {
+      case 'name':
+        this.setData({
+          name: e.detail.value
+        });
+        break;
+
+      case 'psw':
+        this.setData({
+          psw: e.detail.value
+        });
+        break;
+
+      default:
+        break;
+    }
+  },
+
+  // 提交
   submit: function () {
     console.log('登录')
-    Api.login('guiqiang', '123').then((result) => {
+    Api.login(this.data.name, this.data.psw).then((result) => {
       if (result.error) {
         console.error(result.message);
+        Tips.toast(result.message);
         return;
       }
       LocalStorage.login({

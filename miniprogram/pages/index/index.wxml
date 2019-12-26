@@ -1,5 +1,7 @@
 <!--index.wxml-->
 <view class="container">
-  <text>首页</text>
-  <navigator class="item" url="/pages/login/login">登录</navigator>
+  <view class="list">
+    <navigator class="item" url="/pages/login/login">登录</navigator>
+    <navigator class="item" url="/pages/scan/scan">扫码</navigator>
+  </view>
 </view>
