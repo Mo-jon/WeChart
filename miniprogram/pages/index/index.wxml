@@ -3,5 +3,6 @@
   <view class="list">
     <navigator class="item" url="/pages/user/user">获取用户信息</navigator>
     <navigator class="item" url="/pages/scan/scan">扫码</navigator>
+    <navigator class="item" url="/pages/position/position">位置</navigator>
   </view>
 </view>
