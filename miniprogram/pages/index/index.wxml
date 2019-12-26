@@ -1,7 +1,7 @@
 <!--index.wxml-->
 <view class="container">
   <view class="list">
-    <navigator class="item" url="/pages/login/login">登录</navigator>
+    <navigator class="item" url="/pages/user/user">获取用户信息</navigator>
     <navigator class="item" url="/pages/scan/scan">扫码</navigator>
   </view>
 </view>

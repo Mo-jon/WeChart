@@ -1,0 +1,6 @@
+<!--miniprogram/pages/user/user.wxml-->
+<view class="container">
+  <text>用户信息：</text>
+  <text style="word-break: break-word">{{userInfo}}</text>
+  <button open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">授权登录</button>
+</view>
