@@ -1,5 +1,5 @@
 //mine.js
-const app = getApp()
+import Api from "../../services/api";
 
 Page({
   data: {
@@ -7,12 +7,13 @@ Page({
   },
 
   // 加载列表
-  onLoad: function() {
+  onLoad: function () {
     this.getData()
+    this.getCrops()
   },
 
   // 获取数据
-  getData: function() {
+  getData: function () {
     let data = []
     for (let i = 0; i < 10; i++) {
       data.push({
@@ -29,14 +30,21 @@ Page({
     });
   },
 
+  // 获取分类
+  getCrops() {
+    Api.getCrops().then(result => {
+      console.log('获取数据', result)
+    })
+  },
+
   // 加载下一页
-  onReachBottom: function() {
+  onReachBottom: function () {
     console.log('可以分页了')
     this.getData()
   },
 
   // 查看详情
-  goDetail: function(event) {
+  goDetail: function (event) {
     console.log('查看详情', event.detail)
     wx.navigateTo({
       url: `/pages/detail/detail?id=${event.detail.id}`,
