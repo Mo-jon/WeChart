@@ -1,7 +1,7 @@
 // miniprogram/pages/login/login.js
 
 import Api from '../../services/api.js';
-import LocalStorage from "../../services/localStorage";
+import Storage from "../../services/storage";
 import Tips from "../../services/tips";
 
 Page({
@@ -49,7 +49,7 @@ Page({
         Tips.toast(result.message);
         return;
       }
-      LocalStorage.login({
+      Storage.login({
         account: result.data.admin_name,
         nextTime: result.data.admin_next_time,
         token: result.data.admin_token

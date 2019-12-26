@@ -1,5 +1,5 @@
 //mine.js
-import LocalStorage from "../../services/localStorage";
+import Storage from "../../services/storage";
 
 Page({
   data: {
@@ -13,7 +13,7 @@ Page({
   // 每次都加载
   onShow: function() {
     // 获取登录信息
-    this.data.user = LocalStorage.user
+    this.data.user = Storage.user
     this.setData({
       user: this.data.user
     })
@@ -22,7 +22,7 @@ Page({
 
   login: async function() {
     if (this.data.user) {
-      await LocalStorage.logout();
+      await Storage.logout();
     }
     console.log('登录/退出', this.data.user)
     wx.navigateTo({

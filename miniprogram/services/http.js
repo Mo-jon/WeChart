@@ -1,4 +1,4 @@
-import LocalStorage from "./localStorage";
+import Storage from "./storage";
 
 class Http {
   constructor() {
@@ -24,7 +24,7 @@ class Http {
           method: 'GET',
           header: {
             'content-type': 'application/x-www-form-urlencoded',
-            "Token": LocalStorage.user ? LocalStorage.user.token : ''
+            "Token": Storage.user ? Storage.user.token : ''
           },
           success(res) {
             console.log(res.data)
@@ -62,7 +62,7 @@ class Http {
           method: 'POST',
           header: {
             'content-type': 'application/x-www-form-urlencoded',
-            "Token": LocalStorage.user ? LocalStorage.user.token : ''
+            "Token": Storage.user ? Storage.user.token : ''
           },
           success(res) {
             console.log(res.data)

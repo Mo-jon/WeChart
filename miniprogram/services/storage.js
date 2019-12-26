@@ -1,4 +1,4 @@
-class LocalStorage {
+class Storage {
   // 构造函数
   constructor() {
     // 未登录(user==null)
@@ -89,4 +89,4 @@ class LocalStorage {
   }
 }
 
-export default new LocalStorage();
+export default new Storage();
